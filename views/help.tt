@@ -10,11 +10,11 @@
     <br />
     <li>So "partial matching" is a lot better than being too descriptive.</li>
     <br />
-    <li>Searching is done by ignoring the case of words.</li>
+    <li>Searching is done by ignoring the case of words. So "Sugar", "SUGAR" and "sugar" are the same thing.</li>
     <br />
     <li>Remember to try searching for the same word in different ways (i.e. with title, categories, ingredients). You will often get more results.</li>
     <br />
-    <li>There are plurals and unfortunate misspellings. Check the Categories list for variations.</li>
+    <li>There are plurals, hyphens, spaces and unfortunate misspellings for the same term. Check the Categories list for variations.</li>
     <br />
     <li>To clear your results list, submit a search for nothing. That is, blank-out each slot on the main page and click the submit button.</li>
     <br />
