@@ -30,6 +30,12 @@ any '/' => sub {
     my $category   = params->{category};
     my $ingredient = params->{ingredient};
 
+    my $exact_cat = 0;
+    if ( $category && $category =~ /"/ ) {
+        $exact_cat = 1;
+        $category =~ s/"//g;
+    }
+
     # Turn multi-word strings into lists
     $title      = [ split /\s+/, $title ] if $title;
     $category   = [ split /\s+/, $category ] if $category;
@@ -53,8 +59,21 @@ any '/' => sub {
 
         # Category support
         if ( $category && @$category ) {
-            for my $c ( @$category ) {
-                next RECIPE unless grep { $_ =~ /\Q$c\E/i } @{ $recipe->categories };
+            if ( $exact_cat ) {
+                my $cat = join ' ', @$category;
+                my $found = 0;
+                for my $c ( @{ $recipe->categories } ) {
+                    if ( lc($c) eq lc($cat) ) {
+                        $found = 1;
+                        last;
+                    }
+                }
+                next RECIPE unless $found;
+            }
+            else {
+                for my $c ( @$category ) {
+                    next RECIPE unless grep { $_ =~ /\Q$c\E/i } @{ $recipe->categories };
+                }
             }
         }
 
