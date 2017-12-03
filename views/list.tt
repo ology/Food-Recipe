@@ -4,8 +4,9 @@
         <img src="/favicon.ico" height="25" width="25" style="vertical-align:middle;" />
         <span style="font-weight: bold; font-size: large;">Recipe list:</span>
     </div>
+<% IF list.size %>
     <ol>
-<% FOREACH i IN list %>
+    <% FOREACH i IN list %>
         <li>
             <a href="/recipe?title=<% i.title | uri %>"><% i.title.lower.ucfirst %></a>
             <form action='/remove' method="post">
@@ -15,21 +16,24 @@
             </form>
             <br />
             <ol>
-    <% FOREACH j IN i.ingredients %>
+        <% FOREACH j IN i.ingredients %>
                 <li><% j.quantity %> <% j.measure %> <% j.product %></li>
-    <% END %>
+        <% END %>
             </ol>
         </li>
         <p />
-<% END %>
+    <% END %>
     </ol>
 
     <span style="font-weight: bold; font-size: large;">Shopping list:</span>
     <ol>
-<% FOREACH k IN shop.keys.sort %>
+    <% FOREACH k IN shop.keys.sort %>
         <li><% shop.$k.quantity %> <% shop.$k.measure %> <% k %></li>
         <br />
-<% END %>
+    <% END %>
     </ol>
+<% ELSE %>
+    <p>Add recipes to your list!</p>
+<% END %>
 
 </div>
