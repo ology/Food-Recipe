@@ -233,7 +233,7 @@ post '/clear' => sub {
 
 =head2 /remove
 
-Function to remove a recipe the list.
+Function to remove a recipe from the list.
 
 =cut
 
