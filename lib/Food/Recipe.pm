@@ -347,7 +347,7 @@ Display the help page.
 
 =cut
 
-get '/help'  => sub {
+get '/help' => sub {
     template 'help' => {};
 };
 
