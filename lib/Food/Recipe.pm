@@ -1,5 +1,7 @@
 package Food::Recipe;
 
+# ABSTRACT: Recipe Search Tool
+
 use Dancer qw( :syntax );
 use Dancer::Cookies;
 use File::Find::Rule;
@@ -9,6 +11,18 @@ use MealMaster;
 use Storable;
 
 our $VERSION = '0.4';
+
+=head1 DESCRIPTION
+
+A C<Food::Recipe> instance is a L<Dancer> search tool web GUI.
+
+=head1 ROUTES
+
+=head2 /
+
+The main page with searching interface.
+
+=cut
 
 any '/' => sub {
     # Load the form variables
@@ -69,6 +83,12 @@ any '/' => sub {
     };
 };
 
+=head2 /categories
+
+The category list page.
+
+=cut
+
 get '/categories' => sub {
     # Load the recipes
     my @recipes = import_mm(); 
@@ -89,6 +109,12 @@ get '/categories' => sub {
         categories => \%categories,
     };
 };
+
+=head2 /recipe
+
+The recipe detail page with list sidebar.
+
+=cut
 
 any '/recipe' => sub {
     # Load the form variables
@@ -165,6 +191,12 @@ any '/recipe' => sub {
     };
 };
 
+=head2 /add
+
+Function to add a recipe to the list.
+
+=cut
+
 post '/add' => sub {
     # Load the form variables
     my $title = params->{title} or die 'No title provided';
@@ -182,6 +214,12 @@ post '/add' => sub {
     halt;
 };
 
+=head2 /clear
+
+Function to clear the list.
+
+=cut
+
 post '/clear' => sub {
     # Load the form variables
     my $title = params->{title} or die 'No title provided';
@@ -192,6 +230,12 @@ post '/clear' => sub {
     redirect '/recipe?title=' . $title;
     halt;
 };
+
+=head2 /remove
+
+Function to remove a recipe the list.
+
+=cut
 
 post '/remove' => sub {
     # Load the form variables
@@ -209,6 +253,12 @@ post '/remove' => sub {
     redirect '/list';
     halt;
 };
+
+=head2 /list
+
+Display the collected recipes and compute the combined shopping list.
+
+=cut
 
 get '/list'  => sub {
     # Unit conversion dispatch table
@@ -291,9 +341,23 @@ get '/list'  => sub {
     };
 };
 
+=head2 /help
+
+Display the help page.
+
+=cut
+
 get '/help'  => sub {
     template 'help' => {};
 };
+
+=head1 FUNCTIONS
+
+=head2 import_mm()
+
+Import the L<MealMaster> recipes.
+
+=cut
 
 sub import_mm {
     my $recipes;
@@ -314,5 +378,25 @@ sub import_mm {
 
     return @$recipes; 
 }
+
+=head1 SEE ALSO
+
+L<Dancer>
+
+L<Dancer::Cookies>
+
+L<File::Find::Rule>
+
+L<List::Util>
+
+L<Math::Fraction>
+
+L<MealMaster>
+
+L<Storable>
+
+L<http://www.ffts.com/recipes.htm>
+
+=cut
 
 true;
