@@ -295,7 +295,7 @@ get '/list'  => sub {
         }
     }
 
-    # Sum quantities and convert units
+    # Calculate quantities and convert units
     my $items = {};
     for my $recipe ( @items ) {
         for my $ingredient ( @{ $recipe->ingredients } ) {
