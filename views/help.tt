@@ -30,7 +30,7 @@
     <br />
     <li>The shopping list page computes the total ingredients that you will need for all recipes in your list.</li>
     <br />
-    <li>Common kitchen measurements converted to ounces for the shopping list.</li>
+    <li>Common kitchen measurements are converted to ounces for the shopping list.</li>
     <br />
     <li>Please note that the serving size (yield) that you can change for a recipe is not used in your shopping list.</li>
 </ul>
