@@ -16,6 +16,8 @@
     <br />
     <li>There are plurals, hyphens, spaces and unfortunate misspellings for the same term. Check the Categories list for variations.</li>
     <br />
+    <li>The categories can be searched for an exact match, with double quotes, but the title and ingredients are searched by "substring."</li>
+    <br />
     <li>To clear your results list, submit a search for nothing. That is, blank-out each slot on the main page and click the submit button.</li>
     <br />
     <li>Each search result has a link to the full recipe, with itemized ingredients and directions.</li>
