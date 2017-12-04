@@ -120,7 +120,7 @@ get '/categories' => sub {
             $cat =~ s/^\s+//;
             $cat =~ s/\s+$//;
             $cat =~ s/[!.]//g;
-            $cat = ucfirst lc $cat;
+            $cat = lc $cat;
             $categories{$cat}++;
         }
     }
