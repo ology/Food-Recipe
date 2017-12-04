@@ -25,9 +25,9 @@
     <br />
     <li>The recipe page also shows what is in your shopping list and allows you to add-to and clear-all items.</li>
     <br />
-    <li>The recipe page also lets you change the number of servings. Replace the "Yield" quantity and then press enter to have the ingredient quantities recalculated.</li>
-    <br />
     <li>Each item in your list is a link back to the recipe itself.</li>
+    <br />
+    <li>The recipe page also lets you change the number of servings. Replace the "Yield" quantity and then press enter to have the ingredient quantities recalculated.</li>
     <br />
     <li>The shopping list page shows the recipe items you have collected, with a button to remove each.</li>
     <br />
