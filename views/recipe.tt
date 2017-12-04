@@ -2,7 +2,7 @@
 
     <div id="sidebar" style="text-align: right;">
         <a href="/list"><b>Shopping list</b></a>
-        <p />
+        <p></p>
         <form action="/add" method="post">
             <input type="hidden" name="title" value="<% recipe.title %>" />
             Add to list
@@ -26,9 +26,9 @@
         <span style="font-weight: bold; font-size: large;"><% recipe.title.lower.ucfirst %></span>
         (<a target="_blank" href="https://www.google.com/search?q=<% recipe.title | uri %>&tbm=isch">Google images</a>)
     </div>
-    <p/>
+    <p></p>
     <b>Categories:</b> <% recipe.categories.join(', ') %>
-    <p/>
+    <p></p>
     <% UNLESS yield %>
     <% yield = recipe.yield.split(' ').0 %>
     <% END %>
@@ -36,7 +36,7 @@
     <b>Yield:</b> <input type="text" name="yield" value="<% yield %>" size="3" maxlength="3" /> servings
     <input type="hidden" name="title" value="<% recipe.title %>" />
     </form>
-    <p/>
+    <p></p>
     <b>Ingredients:</b>
     <ol>
     <% IF ingredients.size %>
@@ -52,7 +52,7 @@
     <% END %>
     </ol>
     <b>Directions:</b>
-    <p/>
+    <p></p>
     <% FOREACH d IN recipe.directions.split("\n") %>
         <% d %>
         <br/>

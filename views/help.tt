@@ -4,7 +4,6 @@
     <a href="/"><img src="/favicon.ico" height="25" width="25" style="vertical-align:middle;" /></a>
     <span style="font-weight: bold; font-size: large;">Help</span>
 </div>
-<p />
 <ul>
     <li>Adding search terms constrains the results.  That is, imagine that the word "and" were between each term you enter.</li>
     <br />
