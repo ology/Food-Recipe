@@ -5,8 +5,7 @@
     <span class="pageTitle">Recipe Search Tool</span>
     <div class="headerRight">
         <a href="/list"><b>Shopping list</b></a>
-        <p></p>
-        Searching <% total %> recipes
+        <p>Searching <% total %> recipes</p>
     </div>
     <p/>
 </div>
