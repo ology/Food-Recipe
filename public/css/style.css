@@ -1,71 +1,71 @@
 body {
-margin: 0;
-margin-bottom: 25px;
-padding: 0;
-//background-color: #ddd;
-//background-image: url("/images/perldancer-bg.jpg");
-background-repeat: no-repeat;
-background-position: top left;
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0;
+    //background-color: #ddd;
+    //background-image: url("/images/perldancer-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: top left;
 
-font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
-font-size: 13px;
-color: #333;
+    font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+    font-size: 13px;
+    color: #333;
 }
 
 h1 {
-font-size: 28px;
-color: #000;
+    font-size: 28px;
+    color: #000;
 }
 
 a  {color: #03c}
 a:hover {
-background-color: #03c;
-color: white;
-text-decoration: none;
+    background-color: #03c;
+    color: white;
+    text-decoration: none;
 }
 
 #page {
-background-color: #F0FFFF;
-width: 750px;
-margin: auto;
-margin-left: auto;
-padding-left: 0px;
-margin-right: auto;
+    background-color: #F0FFFF;
+    width: 750px;
+    margin: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    margin-right: auto;
 }
 
 #content {
-background-color: white;
-border: 3px solid #aaa;
-border-top: none;
-padding: 25px;
-width: 500px;
+    background-color: white;
+    border: 3px solid #aaa;
+    border-top: none;
+    padding: 25px;
+    width: 500px;
 }
 
 #sidebar {
-float: right;
-width: 175px;
+    float: right;
+    width: 175px;
 }
 
 #sidebar ul {
-margin-left: 0;
-padding-left: 0;
+    margin-left: 0;
+    padding-left: 0;
 }
 #sidebar ul h3 {
-margin-top: 25px;
-font-size: 16px;
-padding-bottom: 10px;
-border-bottom: 1px solid #ccc;
+    margin-top: 25px;
+    font-size: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
 }
 #sidebar li {
-//list-style-type: none;
+    //list-style-type: none;
 }
 #sidebar ul.links li {
-margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 h1, h2, h3, h4, h5 {
-font-family: sans-serif;
-margin: 1.2em 0 0.6em 0;
+    font-family: sans-serif;
+    margin: 1.2em 0 0.6em 0;
 }
 
 p {
@@ -78,12 +78,12 @@ code, tt {
 }
 
 #footer {
-clear: both;
-padding-top: 2em;
-text-align: center;
-padding-right: 160px;
-font-family: sans-serif;
-font-size: 10px;
+    clear: both;
+    padding-top: 2em;
+    text-align: center;
+    padding-right: 160px;
+    font-family: sans-serif;
+    font-size: 10px;
 }
 
 .divTable {
