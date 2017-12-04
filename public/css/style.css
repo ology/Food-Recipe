@@ -136,3 +136,8 @@ code, tt {
 .paddedItem {
     padding-bottom: 15px;
 }
+
+.lineBreak {
+    display: block;
+    padding-bottom: 10px;
+}

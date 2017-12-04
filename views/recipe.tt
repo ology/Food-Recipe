@@ -49,8 +49,7 @@
     </ol>
     <p><b>Directions:</b></p>
     <% FOREACH d IN recipe.directions.split("\n") %>
-        <% d %>
-        <br/>
+        <span class="lineBreak"><% d %></span>
     <% END %>
 <% END %>
 
