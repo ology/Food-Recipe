@@ -22,7 +22,7 @@
 
 <% IF recipe %>
     <div>
-        <img src="/favicon.ico" height="25" width="25" style="vertical-align:middle;" />
+        <a href="/"><img src="/favicon.ico" height="25" width="25" style="vertical-align:middle;" /></a>
         <span style="font-weight: bold; font-size: large;"><% recipe.title.lower.ucfirst %></span>
         (<a target="_blank" href="https://www.google.com/search?q=<% recipe.title | uri %>&tbm=isch">Google images</a>)
     </div>
