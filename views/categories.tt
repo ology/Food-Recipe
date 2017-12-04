@@ -1,10 +1,10 @@
 <div id="page">
 
 <h2>
-<a href="/"><img src="/favicon.ico" height="25" width="25" style="vertical-align:middle;" /></a>
+<a href="/"><img src="/favicon.ico" height="25" width="25" class="logoAlign" /></a>
 Categories
 </h2>
-<div style="text-align: justify;">
+<div class="categoryText">
 <% FOREACH c IN categories %>
 <a href="/?category=&quot;<% c.key | uri %>&quot;"><% c.key.ucfirst %> (<% c.value %>)</a>
 <% END %>

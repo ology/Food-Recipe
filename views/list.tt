@@ -1,8 +1,8 @@
 <div id="page">
 
     <div>
-        <a href="/"><img src="/favicon.ico" height="25" width="25" style="vertical-align:middle;" /></a>
-        <span style="font-weight: bold; font-size: large;">Recipe list:</span>
+        <a href="/"><img src="/favicon.ico" height="25" width="25" class="logoAlign" /></a>
+        <span class="pageTitle">Recipe list:</span>
     </div>
 <% IF list.size %>
     <ol>
@@ -26,7 +26,7 @@
     </ol>
 
     <hr />
-    <span style="font-weight: bold; font-size: large;">Shopping list:</span>
+    <span class="pageTitle">Shopping list:</span>
     <ol>
     <% FOREACH k IN shop.keys.sort %>
         <li><% shop.$k.quantity %> <% shop.$k.measure %> <% k %></li>

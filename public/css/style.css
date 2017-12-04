@@ -44,6 +44,7 @@ a:hover {
 #sidebar {
     float: right;
     width: 175px;
+    text-align: right;
 }
 
 #sidebar ul {
@@ -112,4 +113,22 @@ code, tt {
 }
 .divTableBody {
     display: table-row-group;
+}
+
+.logoAlign {
+    vertical-align: middle;
+}
+
+.pageTitle {
+    font-weight: bold;
+    font-size: large;
+}
+
+.categoryText {
+    text-align: justify;
+}
+
+.headerRight {
+    float: right;
+    text-align: right;
 }
