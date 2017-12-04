@@ -29,7 +29,7 @@
     <span class="pageTitle">Shopping list:</span>
     <ol>
     <% FOREACH k IN shop.keys.sort %>
-        <li><% shop.$k.quantity %> <% shop.$k.measure %> <% k %></li>
+        <li><% shop.$k.quantity %> <% shop.$k.measure %> <% k.lower.ucfirst %></li>
         <br />
     <% END %>
     </ol>
