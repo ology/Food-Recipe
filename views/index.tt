@@ -12,28 +12,19 @@
 </div>
 
 <form action="/" method="post">
-<div class="divTable">
-    <div class="divTableBody">
-        <div class="divTableRow">
-            <div class="divTableCell"><strong>Title:</strong></div>
-            <div class="divTableCell"><input name="title" type="text" value="" /></div>
-            <div class="divTableCell">Ex: chicken</div>
-        </div>
-        <div class="divTableRow">
-            <div class="divTableCell"><strong><a href="/categories">Categories</a>:</strong></div>
-            <div class="divTableCell"><input name="category" type="text" value="" /></div>
-            <div class="divTableCell">Ex: holiday meat</div>
-        </div>
-        <div class="divTableRow">
-            <div class="divTableCell"><strong>Ingredients:</strong></div>
-            <div class="divTableCell"><input name="ingredient" type="text" value="" /></div>
-            <div class="divTableCell">Ex: salt sugar</div>
-        </div>
-        <div class="divTableRow">
-            <div class="divTableCell"><input name="submit" type="submit" value="Submit" /></div>
-        </div>
-    </div>
-</div>
+    <strong>Title:</strong>
+    <input name="title" type="text" value="" />
+    Ex: chicken
+    <br />
+    <strong><a href="/categories">Categories</a>:</strong>
+    <input name="category" type="text" value="" />
+    Ex: holiday meat
+    <br />
+    <strong>Ingredients:</strong>
+    <input name="ingredient" type="text" value="" />
+    Ex: salt sugar
+    <br />
+    <input name="submit" type="submit" value="Submit" />
 </form>
 
 <hr/>
