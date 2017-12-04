@@ -41,13 +41,11 @@
     <ol>
     <% IF ingredients.size %>
         <% FOREACH i IN ingredients %>
-        <li><% i.quantity %> <% i.measure %> <% i.product %></li>
-        <br/>
+        <li class="paddedItem"><% i.quantity %> <% i.measure %> <% i.product %></li>
         <% END %>
     <% ELSE %>
         <% FOREACH i IN recipe.ingredients %>
-        <li><% i.quantity %> <% i.measure %> <% i.product %></li>
-        <br/>
+        <li class="paddedItem"><% i.quantity %> <% i.measure %> <% i.product %></li>
         <% END %>
     <% END %>
     </ol>

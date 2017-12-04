@@ -132,3 +132,7 @@ code, tt {
     float: right;
     text-align: right;
 }
+
+.paddedItem {
+    padding-bottom: 20px;
+}

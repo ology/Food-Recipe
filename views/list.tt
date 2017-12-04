@@ -7,7 +7,7 @@
 <% IF list.size %>
     <ol>
     <% FOREACH i IN list %>
-        <li>
+        <li class="paddedItem">
             <a href="/recipe?title=<% i.title | uri %>"><% i.title.lower.ucfirst %></a>
             <form action='/remove' method="post">
                 <input type="hidden" name="title" value="<% i.title %>" />
@@ -21,7 +21,6 @@
         <% END %>
             </ol>
         </li>
-        <p></p>
     <% END %>
     </ol>
 
@@ -29,8 +28,7 @@
     <span class="pageTitle">Shopping list:</span>
     <ol>
     <% FOREACH k IN shop.keys.sort %>
-        <li><% shop.$k.quantity %> <% shop.$k.measure %> <% k.lower.ucfirst %></li>
-        <br />
+        <li class="paddedItem"><% shop.$k.quantity %> <% shop.$k.measure %> <% k.lower.ucfirst %></li>
     <% END %>
     </ol>
 <% ELSE %>
