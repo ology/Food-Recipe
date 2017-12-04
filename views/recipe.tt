@@ -51,7 +51,6 @@
     <% FOREACH d IN recipe.directions.split("\n") %>
         <br><% d %></br>
     <% END %>
-    </ol>
 <% END %>
 
 </div>
