@@ -4,8 +4,10 @@
 <img src="/favicon.ico" height="25" width="25" style="vertical-align:middle;" />
 Categories
 </h2>
+<div style="text-align: justify;">
 <% FOREACH c IN categories %>
 <a href="/?category=&quot;<% c.key.lower | uri %>&quot;"><% c.key %> (<% c.value %>)</a>
 <% END %>
+</div>
 
 </div>
