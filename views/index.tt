@@ -12,29 +12,31 @@
 </div>
 
 <form action="/" method="post">
-<table>
-    <tr>
-        <td><b>Title:</b></td>
-        <td><input type="text" name="title" value="<% title.join(' ') %>"/></td>
-        <td>Ex: chicken</td>
-    </tr>
-    <tr>
-        <td><b><a href="/categories">Categories</a>:</b></td>
-        <td><input type="text" name="category" value="<% category.join(' ') %>"/></td>
-        <td>Ex: holiday meat</td>
-    </tr>
-    <tr>
-        <td><b>Ingredients:</b></td>
-        <td><input type="text" name="ingredient" value="<% ingredient.join(' ') %>"/></td>
-        <td>Ex: salt sugar</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>
-            <input type="submit" name="submit" value="Submit"/>
-        </td>
-    </tr>
-</table>
+
+<div class="divTable">
+<div class="divTableBody">
+<div class="divTableRow">
+<div class="divTableCell"><strong>Title:</strong></div>
+<div class="divTableCell"><input name="title" type="text" value="<% title.join(' ') %>" /></div>
+<div class="divTableCell">Ex: chicken</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell"><strong><a href="/categories">Categories</a>:</strong></div>
+<div class="divTableCell"><input name="category" type="text" value="<% category.join(' ') %>" /></div>
+<div class="divTableCell">Ex: holiday meat</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell"><strong>Ingredients:</strong></div>
+<div class="divTableCell"><input name="ingredient" type="text" value="<% ingredient.join(' ') %>" /></div>
+<div class="divTableCell">Ex: salt sugar</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell"><input name="submit" type="submit" value="Submit" /></div>
+</div>
+</div>
+</div>
+
 </form>
 
 <hr/>
