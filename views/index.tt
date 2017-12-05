@@ -46,9 +46,9 @@
 <ol>
     <% FOREACH recipe IN matched %>
     <li class="paddedItem">
-        <a href="/recipe?title=<% recipe.title | uri %>"><% recipe.title.lower.ucfirst %></a>
+        <a href="/recipe?title=<% recipe.title | uri %>&category=<% recipe.categories.join(' ') | uri %>"><% recipe.title.lower.ucfirst %></a>
         <br/>
-        <b>Categories:</b> <% recipe.categories %>
+        <b>Categories:</b> <% recipe.categories.join(', ') %>
         <br/>
         <b>Ingredients:</b> <% recipe.ingredients.lower %>
     </li>

@@ -87,7 +87,7 @@ any '/' => sub {
         # If we have made it this far, populate our matches
         push @matched, {
             title       => $recipe->title,
-            categories  => join( ', ', sort @{ $recipe->categories } ),
+            categories  => $recipe->categories,
             yield       => $recipe->yield,
             ingredients => join( ', ', map { $_->product } @{ $recipe->ingredients } ),
         };
