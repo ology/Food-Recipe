@@ -8,7 +8,7 @@
     <ol>
     <% FOREACH i IN list %>
         <li class="paddedItem">
-            <a href="/recipe?title=<% i.title | uri %>"><% i.title.lower.ucfirst %></a>
+            <a href="/recipe?title=<% i.title | uri %>&category=<% i.categories.join(' ').lower | uri %>"><% i.title.lower.ucfirst %></a>
             <form action='/remove' method="post">
                 <input type="hidden" name="title" value="<% i.title %>" />
                 Remove from list
