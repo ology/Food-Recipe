@@ -34,8 +34,9 @@
     <% yield = recipe.yield.split(' ').0 %>
     <% END %>
     <form action="/recipe" method="post">
-    <b>Yield:</b> <input type="text" name="yield" value="<% yield %>" size="3" maxlength="3" /> servings
-    <input type="hidden" name="title" value="<% recipe.title %>" />
+        <b>Yield:</b> <input type="text" name="yield" value="<% yield %>" size="3" maxlength="3" /> servings
+        <input type="hidden" name="title" value="<% recipe.title | uri %>" />
+        <input type="hidden" name="category" value="<% recipe.categories.join(' ') | uri %>" />
     </form>
     <p><b>Ingredients:</b></p>
     <ol>
