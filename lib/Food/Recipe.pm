@@ -147,11 +147,12 @@ any '/recipe' => sub {
     # Load the recipes
     my @recipes = import_mm(); 
 
-    my @match = grep { lc($_->title) eq lc($title) } @recipes;
-
-    for my $recipe ( @match ) {
+    my @matches = grep { lc($_->title) eq lc($title) } @recipes;
+    my @match;
+    for my $recipe ( @matches ) {
         my $cat = join ' ', @{ $recipe->categories };
         next if lc($category) ne lc($cat);
+        push @match, $recipe;
     }
 
     # Convert the number of servings
