@@ -18,7 +18,7 @@
         </p>
         <ol>
 <% FOREACH i IN list %>
-            <li><a href="/recipe?title=<% i %>"><% i.lower.ucfirst %></a></li>
+            <li><a href="/recipe?title=<% i %>&category=<% recipe.categories.join(' ').lower | uri %>"><% i.lower.ucfirst %></a></li>
 <% END %>
         </ol>
     </div>
