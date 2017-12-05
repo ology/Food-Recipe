@@ -138,8 +138,9 @@ The recipe detail page with list sidebar.
 
 any '/recipe' => sub {
     # Load the form variables
-    my $title = params->{title} or die 'No title provided';
-    my $yield = params->{yield};
+    my $title    = params->{title} or die 'No title provided';
+    my $category = params->{category};
+    my $yield    = params->{yield};
 
     my $ingredients;
 
@@ -147,6 +148,11 @@ any '/recipe' => sub {
     my @recipes = import_mm(); 
 
     my @match = grep { $_->title eq $title } @recipes;
+
+    for my $recipe ( @match ) {
+        my $cat = join ' ', @{ $recipe->categories };
+        next if $category ne $cat;
+    }
 
     # Convert the number of servings
     if ( $yield ) {
