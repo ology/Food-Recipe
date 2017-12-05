@@ -226,7 +226,8 @@ Function to add a recipe to the list.
 
 post '/add' => sub {
     # Load the form variables
-    my $title = params->{title} or die 'No title provided';
+    my $title    = params->{title} or die 'No title provided';
+    my $category = params->{category};
 
     # Add the item to the shopping list
     my $list = cookie('list');
@@ -237,7 +238,7 @@ post '/add' => sub {
         cookie( list => join( '|', keys %list ) );
     }
 
-    redirect '/recipe?title=' . $title;
+    redirect '/recipe?title=' . $title . '&category=' . $category;
     halt;
 };
 
@@ -249,12 +250,13 @@ Function to clear the list.
 
 post '/clear' => sub {
     # Load the form variables
-    my $title = params->{title} or die 'No title provided';
+    my $title    = params->{title} or die 'No title provided';
+    my $category = params->{category};
 
     # Clear the shopping list
     cookie( list => '' );
 
-    redirect '/recipe?title=' . $title;
+    redirect '/recipe?title=' . $title . '&category=' . $category;
     halt;
 };
 
