@@ -2,7 +2,7 @@
 
 <div>
     <a href="/"><img src="/favicon.ico" height="25" width="25" class="logoAlign" /></a>
-    <span class="pageTitle">Help</span>
+    <h2 class="pageTitle">Help</h2>
 </div>
 <ul>
     <li>Adding search terms constrains the results.  That is, imagine that the word "and" were between each term you enter.</li>
