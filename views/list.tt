@@ -2,8 +2,9 @@
 
     <div>
         <a href="/"><img src="/favicon.ico" height="25" width="25" class="logoAlign" /></a>
-        <h2 class="pageTitle">Recipe list:</span>
+        <h2 class="pageTitle">Recipe list:</h2>
     </div>
+
 <% IF list.size %>
     <ol>
     <% FOREACH i IN list %>
