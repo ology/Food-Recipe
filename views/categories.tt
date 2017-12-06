@@ -1,6 +1,6 @@
 <div id="page">
 
-<h2>
+<h2 class="pageTitle">
 <a href="/"><img src="/favicon.ico" height="25" width="25" class="logoAlign" /></a>
 Categories
 </h2>

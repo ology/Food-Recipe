@@ -26,7 +26,7 @@
 <% IF recipe %>
     <div>
         <a href="/"><img src="/favicon.ico" height="25" width="25" class="logoAlign" /></a>
-        <span class="pageTitle"><% recipe.title.lower.ucfirst %></span>
+        <h2 class="pageTitle"><% recipe.title.lower.ucfirst %></h2>
         (<a target="_blank" href="https://www.google.com/search?q=<% recipe.title | uri %>&tbm=isch">Google images</a>)
     </div>
     <p><b>Categories:</b> <% recipe.categories.join(', ') %></p>

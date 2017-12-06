@@ -1,13 +1,15 @@
 <div id="page">
 
 <div>
-    <a href="/"><img src="/favicon.ico" height="25" width="25" class="logoAlign" /></a>
-    <span class="pageTitle">Recipe Search Tool</span>
+    <div class="headerLeft">
+        <a href="/"><img src="/favicon.ico" height="25" width="25" class="logoAlign" /></a>
+        <h2 class="pageTitle">Recipe Search Tool</h2>
+    </div>
     <div class="headerRight">
         <a href="/list"><b>Shopping list</b></a>
-        <p>Searching <% total %> recipes</p>
+        <br />Searching <% total %> recipes
     </div>
-    <p/>
+    <br clear="all" />
 </div>
 
 <form action="/" method="post">

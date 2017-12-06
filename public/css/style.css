@@ -120,8 +120,11 @@ code, tt {
 }
 
 .pageTitle {
-    font-weight: bold;
-    font-size: large;
+    display: inline;
+}
+
+.headerLeft {
+    float: left;
 }
 
 .categoryText {
