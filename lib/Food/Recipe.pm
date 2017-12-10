@@ -117,9 +117,6 @@ get '/categories' => sub {
     # Extract and normalize the categories
     for my $recipe ( @recipes ) {
         for my $cat ( @{ $recipe->categories } ) {
-            $cat =~ s/^\s+//;
-            $cat =~ s/\s+$//;
-            $cat =~ s/[!.]//g;
             $cat = lc $cat;
             $categories{$cat}++;
         }
