@@ -202,10 +202,7 @@ any '/recipe' => sub {
         directions  => $match[0]->directions,
     } if @match;
 
-    # Change the shopping list cookie to an array reference to display
-    my $list = cookie('list');
-    $list = [ split /\s*\|\s*/, $list ]
-        if $list;
+    my $list = _cookies_as_arrayref();
 
     template 'recipe' => {
         recipe      => $recipe,
@@ -227,13 +224,7 @@ post '/add' => sub {
     my $category = params->{category};
 
     # Add the item to the shopping list
-    my $list = cookie('list');
-    my %list;
-    if ( $list || $title ) {
-        @list{ split /\s*\|\s*/, $list } = undef;
-        $list{$title} = undef;
-        cookie( list => join( '|', keys %list ) );
-    }
+    _add_remove_cookies( $title, 1 );
 
     redirect '/recipe?title=' . $title . '&category=' . $category;
     halt;
@@ -268,13 +259,7 @@ post '/remove' => sub {
     my $title = params->{title} or die 'No title provided';
 
     # Remove the given item from the shopping list
-    my $list = cookie('list');
-    my %list;
-    if ( $title ) {
-        @list{ split /\s*\|\s*/, $list } = undef;
-        delete $list{$title};
-        cookie( list => join( '|', keys %list ) );
-    }
+    _add_remove_cookies( $title, 0 );
 
     redirect '/list';
     halt;
@@ -304,10 +289,7 @@ get '/list'  => sub {
     # Load the recipes
     my @recipes = import_mm(); 
 
-    # Change the shopping list cookie to an array reference to display
-    my $list = cookie('list');
-    $list = [ split /\s*\|\s*/, $list ]
-        if $list;
+    my $list = _cookies_as_arrayref();
 
     my @items;
 
@@ -403,6 +385,33 @@ sub import_mm {
     }
 
     return @$recipes; 
+}
+
+sub _cookies_as_arrayref {
+    my $list = cookie('list');
+    $list = [ split /\s*\|\s*/, $list ]
+        if $list;
+    return $list;
+}
+
+sub _add_remove_cookies {
+    my ( $title, $flag ) = @_;
+
+    my $list = cookie('list');
+    my %list;
+    if ( $list || $title ) {
+        @list{ split /\s*\|\s*/, $list } = undef;
+
+        if ( $flag ) {
+            # Add the item to the shopping list
+            $list{$title} = undef;
+        }
+        else {
+            delete $list{$title};
+        }
+
+        cookie( list => join( '|', keys %list ) );
+    }
 }
 
 =head1 SEE ALSO
