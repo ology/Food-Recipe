@@ -407,6 +407,7 @@ sub _add_remove_cookies {
             $list{$title} = undef;
         }
         else {
+            # Remove item from shopping list
             delete $list{$title};
         }
 
