@@ -12,6 +12,8 @@ use Storable;
 
 our $VERSION = '0.4';
 
+my $COOKIE_SEP = qr/\s*\|\s*/;
+
 =head1 DESCRIPTION
 
 A C<Food::Recipe> instance is a L<Dancer> search tool web GUI.
@@ -389,7 +391,7 @@ sub import_mm {
 
 sub _cookies_as_arrayref {
     my $list = cookie('list');
-    $list = [ split /\s*\|\s*/, $list ]
+    $list = [ split /$COOKIE_SEP/, $list ]
         if $list;
     return $list;
 }
@@ -400,7 +402,7 @@ sub _add_remove_cookies {
     my $list = cookie('list');
     my %list;
     if ( $list || $title ) {
-        @list{ split /\s*\|\s*/, $list } = undef;
+        @list{ split /$COOKIE_SEP/, $list } = undef;
 
         if ( $flag ) {
             # Add the item to the shopping list
