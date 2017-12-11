@@ -10,7 +10,7 @@ use Math::Fraction;
 use MealMaster;
 use Storable;
 
-our $VERSION = '0.4';
+our $VERSION = '0.05';
 
 my $COOKIE_SEP = qr/\s*\|\s*/;
 
