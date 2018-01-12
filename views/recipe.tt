@@ -39,7 +39,7 @@
         <input type="hidden" name="category" value="<% recipe.categories.join(' ') %>" />
     </form>
     <p><b>Ingredients:</b></p>
-    <ol>
+    <ul>
     <% IF ingredients.size %>
         <% FOREACH i IN ingredients %>
         <li class="paddedItem"><% i.quantity %> <% i.measure %> <% i.product %></li>
@@ -49,7 +49,7 @@
         <li class="paddedItem"><% i.quantity %> <% i.measure %> <% i.product %></li>
         <% END %>
     <% END %>
-    </ol>
+    </ul>
     <p><b>Directions:</b></p>
     <% FOREACH d IN recipe.directions.split("\n") %>
         <span class="lineBreak"><% d %></span>
