@@ -32,6 +32,7 @@ any '/' => sub {
     my $category   = params->{category};
     my $ingredient = params->{ingredient};
 
+    # If the category contains a ", assume we are looking for an exact match
     my $exact_cat = 0;
     if ( $category && $category =~ /"/ ) {
         $exact_cat = 1;
