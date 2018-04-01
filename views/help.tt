@@ -7,8 +7,6 @@
 <ul>
     <li>Adding search terms constrains the results.  That is, imagine that the word "and" were between each term you enter.</li>
     <br />
-    <li>So "partial matching" is a lot better than being too descriptive.</li>
-    <br />
     <li>Searching is done by ignoring the case of words. So "Sugar", "SUGAR" and "sugar" are the same thing.</li>
     <br />
     <li>Remember to try searching for the same word in different ways (i.e. with title, categories, ingredients). You will often get more results.</li>
