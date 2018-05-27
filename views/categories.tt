@@ -1,9 +1,10 @@
 <div id="page">
 
-<h2 class="pageTitle">
-<a href="/"><img src="/favicon.ico" height="25" width="25" class="logoAlign" /></a>
-Categories
-</h2>
+<h3 class="pageTitle">
+<a href="/">Recipe Search Tool</a>
+<br />
+Categories:
+</h3>
 <div class="categoryText">
 <% FOREACH c IN categories %>
 <a href="/?category=&quot;<% c.key | uri %>&quot;"><% c.key.ucfirst %> (<% c.value %>)</a>
