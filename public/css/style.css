@@ -19,14 +19,14 @@ h1 {
 
 a  {color: #03c}
 a:hover {
-    background-color: #03c;
+//    background-color: #03c;
     color: white;
     text-decoration: none;
 }
 
 #page {
     background-color: #F0FFFF;
-    width: 750px;
+    width: 80%;
     margin: auto;
     margin-left: auto;
     padding-left: 0px;
