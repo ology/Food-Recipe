@@ -21,7 +21,7 @@
         </label>
       </div>
       <div class="medium-6 cell">
-        <label>Category
+        <label><a href="categories">Category</a>
           <input name="category" type="text" placeholder="holiday meat">
         </label>
       </div>
