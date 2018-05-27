@@ -22,7 +22,7 @@
       </div>
       <div class="medium-6 cell">
         <label><a href="categories">Category</a>
-          <input name="category" type="text" placeholder="holiday meat">
+          <input name="category" type="text" placeholder="holiday meat" value="<% category.join(' ') %>">
         </label>
       </div>
       <div class="medium-6 cell">
