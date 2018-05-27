@@ -1,9 +1,9 @@
 <div id="page">
 
     <div>
-        <a href="/"><img src="/favicon.ico" height="25" width="25" class="logoAlign" /></a>
-        <h2 class="pageTitle">Recipe list:</h2>
+        <a href="/"><h3 class="pageTitle">Recipe Search Tool</h3></a>
     </div>
+    <br />
 
 <% IF list.size %>
     <ol>
@@ -13,9 +13,8 @@
             <form action='/remove' method="post">
                 <input type="hidden" name="title" value="<% i.title %>" />
                 Remove from list
-                <input type="submit" name="submit" value=">" />
+                <button type="submit" name="submit" class="button tiny">&gt;</button>
             </form>
-            <br />
             <ol>
         <% FOREACH j IN i.ingredients %>
                 <li><% j.quantity %> <% j.measure %> <% j.product %></li>

@@ -7,13 +7,13 @@
             <input type="hidden" name="title" value="<% recipe.title %>" />
             <input type="hidden" name="category" value="<% recipe.categories.join(' ') | uri %>" />
             Add to list
-            <input type="submit" name="submit" value=">" />
+            <button type="submit" name="submit" class="button tiny">&gt;</button>
         </form>
         <form action="/clear" method="post">
             <input type="hidden" name="title" value="<% recipe.title %>" />
             <input type="hidden" name="category" value="<% recipe.categories.join(' ') | uri %>" />
             Clear list
-            <input type="submit" name="submit" value=">" />
+            <button type="submit" name="submit" class="button tiny">&gt;</button>
         </form>
         </p>
         <ol>
@@ -25,16 +25,29 @@
 
 <% IF recipe %>
     <div>
-        <a href="/"><img src="/favicon.ico" height="25" width="25" class="logoAlign" /></a>
-        <h2 class="pageTitle"><% recipe.title.lower.ucfirst %></h2>
+        <a href="/"><h3 class="pageTitle">Recipe Search Tool</h3></a>
+        <br />
+        <br />
+        <h4 class="pageTitle"><% recipe.title.lower.ucfirst %></h4>
         (<a target="_blank" href="https://www.google.com/search?q=<% recipe.title | uri %>&tbm=isch">Google images</a>)
     </div>
+    <br />
     <p><b>Categories:</b> <% recipe.categories.join(', ') %></p>
     <% UNLESS yield %>
     <% yield = recipe.yield.split(' ').0 %>
     <% END %>
     <form action="/recipe" method="post">
-        <b>Yield:</b> <input type="text" name="yield" value="<% yield %>" size="3" maxlength="3" /> servings
+
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="medium-6 cell">
+        <label>Serving yield
+            <input type="text" name="yield" value="<% yield %>" size="3" maxlength="3" />
+        </label>
+      </div>
+    </div>
+  </div>
+
         <input type="hidden" name="title" value="<% recipe.title %>" />
         <input type="hidden" name="category" value="<% recipe.categories.join(' ') %>" />
     </form>

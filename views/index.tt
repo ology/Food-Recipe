@@ -2,8 +2,7 @@
 
 <div>
     <div class="headerLeft">
-        <a href="/"><img src="/favicon.ico" height="25" width="25" class="logoAlign" /></a>
-        <h2 class="pageTitle">Recipe Search Tool</h2>
+        <h3>Recipe Search Tool</h3>
     </div>
     <div class="headerRight">
         <a href="/list"><b>Shopping list</b></a>
@@ -14,37 +13,34 @@
 
 <form action="/" method="post">
 
-<div class="divTable">
-    <div class="divTableBody">
-        <div class="divTableRow">
-            <div class="divTableCell"><strong>Title:</strong></div>
-            <div class="divTableCell"><input name="title" type="text" value="<% title.join(' ') %>" /></div>
-            <div class="divTableCell">Ex: chicken</div>
-        </div>
-        <div class="divTableRow">
-            <div class="divTableCell"><strong><a href="/categories">Categories</a>:</strong></div>
-            <div class="divTableCell"><input name="category" type="text" value="<% category.join(' ') %>" /></div>
-            <div class="divTableCell">Ex: holiday meat</div>
-        </div>
-        <div class="divTableRow">
-            <div class="divTableCell"><strong>Ingredients:</strong></div>
-            <div class="divTableCell"><input name="ingredient" type="text" value="<% ingredient.join(' ') %>" /></div>
-            <div class="divTableCell">Ex: salt sugar</div>
-        </div>
-        <div class="divTableRow">
-            <div class="divTableCell">&nbsp;</div>
-            <div class="divTableCell"><input name="submit" type="submit" value="Submit" /></div>
-        </div>
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="medium-6 cell">
+        <label>Title
+          <input name="title" type="text" placeholder="chicken">
+        </label>
+      </div>
+      <div class="medium-6 cell">
+        <label>Category
+          <input name="category" type="text" placeholder="holiday meat">
+        </label>
+      </div>
+      <div class="medium-6 cell">
+        <label>Ingredients
+          <input name="ingredient" type="text" placeholder="salt sugar">
+        </label>
+      </div>
     </div>
-</div>
+  </div>
+
+<button name="submit" type="submit">Search</button>
 
 </form>
 
 <hr/>
 
 <% IF title || category || ingredient %>
-<b>Found <% matched.size %> recipe(s)<% IF matched.size %>:<% END %></b>
-<br/>
+<p><b>Found <% matched.size %> recipe(s)<% IF matched.size %>:<% END %></b></p>
 <ol>
     <% FOREACH recipe IN matched %>
     <li class="paddedItem">
