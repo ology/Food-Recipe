@@ -12,8 +12,7 @@
             <a href="/recipe?title=<% i.title | uri %>&category=<% i.categories.join(' ').lower | uri %>"><% i.title.lower.ucfirst %></a>
             <form action='/remove' method="post">
                 <input type="hidden" name="title" value="<% i.title %>" />
-                Remove from list
-                <button type="submit" name="submit" class="button tiny">&gt;</button>
+                <button type="submit" name="submit" class="button tiny">Remove</button>
             </form>
             <ol>
         <% FOREACH j IN i.ingredients %>
