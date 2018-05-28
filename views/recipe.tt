@@ -38,7 +38,7 @@
 
   <div class="grid-container">
     <div class="grid-x grid-padding-x">
-      <div class="medium-6 cell">
+      <div class="medium-1 cell">
         <label>Serving yield
             <input type="text" name="yield" value="<% yield %>" size="3" maxlength="3" />
         </label>
