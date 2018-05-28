@@ -24,7 +24,7 @@
     </ol>
 
     <hr />
-    <span class="pageTitle">Shopping list:</span>
+    <span class="pageTitle"><b>Shopping list:</b></span>
     <ol>
     <% FOREACH k IN shop.keys.sort %>
         <li class="paddedItem"><% shop.$k.quantity %> <% shop.$k.measure %> <% k.lower.ucfirst %></li>
