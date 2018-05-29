@@ -49,8 +49,6 @@ any '/' => sub {
 
     my @matched;
 
-    my $i = 0;
-
     # Filter the recipes
     RECIPE: for my $recipe ( @recipes ) {
         # Title support
