@@ -1,7 +1,7 @@
 <div id="page">
 
     <div id="sidebar">
-        <a href="/list"><b>Shopping list</b></a> (<% list.size %>)
+        <a href="/list"><b>Shopping list</b></a><% IF list.size %>(<% list.size %>)<% END %>
         <p>
         <form action="/add" method="post">
             <input type="hidden" name="title" value="<% recipe.title %>" />
