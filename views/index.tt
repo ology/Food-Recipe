@@ -5,7 +5,7 @@
         <h3>Recipe Search Tool</h3>
     </div>
     <div class="headerRight">
-        <a href="/list"><b>Shopping list</b></a>
+        <a href="/list"><b>Shopping list</b></a> (<% list.size %>)
         <br />Searching <% total %> recipes
     </div>
     <br clear="all" />
