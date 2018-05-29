@@ -94,12 +94,15 @@ any '/' => sub {
         };
     }
 
+    my $list = _cookies_as_arrayref();
+
     template 'index' => {
         title      => $title,
         category   => $category,
         ingredient => $ingredient,
         matched    => \@matched,
         total      => scalar(@recipes),
+        list       => $list,
     };
 };
 
