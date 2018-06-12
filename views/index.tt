@@ -37,8 +37,6 @@
 
 </form>
 
-<hr/>
-
 <% IF title || category || ingredient %>
 <p><b>Found <% matched.size %> recipe(s)<% IF matched.size %>:<% END %></b></p>
 <ol>
