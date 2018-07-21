@@ -97,6 +97,7 @@ any '/' => sub {
     my $list = _cookies_as_arrayref();
 
     template 'index' => {
+        page_title => 'Recipe Search Tool',
         title      => $title,
         category   => $category,
         ingredient => $ingredient,
@@ -127,7 +128,7 @@ get '/categories' => sub {
     }
 
     template 'categories' => {
-        title      => 'Recipe Search Tool',
+        page_title => 'Recipe Search Tool',
         categories => \%categories,
     };
 };
@@ -210,7 +211,7 @@ any '/recipe' => sub {
     my $list = _cookies_as_arrayref();
 
     template 'recipe' => {
-        title       => ref($recipe->{title}) ? 'Recipe Search Tool' : $recipe->{title},
+        page_title  => $recipe->{title},
         recipe      => $recipe,
         yield       => $yield,
         ingredients => $ingredients,
@@ -350,9 +351,9 @@ get '/list'  => sub {
     }
 
     template 'list' => {
-        title => 'Recipe Search Tool',
-        list  => \@items,
-        shop  => $shop,
+        page_title => 'Recipe Search Tool',
+        list => \@items,
+        shop => $shop,
     };
 };
 
@@ -364,7 +365,7 @@ Display the help page.
 
 get '/help' => sub {
     template 'help' => {
-        title => 'Recipe Search Tool',
+        page_title => 'Recipe Search Tool',
     };
 };
 
