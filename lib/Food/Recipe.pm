@@ -210,7 +210,7 @@ any '/recipe' => sub {
     my $list = _cookies_as_arrayref();
 
     template 'recipe' => {
-        title       => $recipe->{title},
+        title       => ref($recipe->{title}) ? 'Recipe Search Tool' : $recipe->{title},
         recipe      => $recipe,
         yield       => $yield,
         ingredients => $ingredients,
