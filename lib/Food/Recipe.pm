@@ -97,7 +97,7 @@ any '/' => sub {
     my $list = _cookies_as_arrayref();
 
     template 'index' => {
-        title      => 'Recipe Search Tool',
+        title      => $title,
         category   => $category,
         ingredient => $ingredient,
         matched    => \@matched,
