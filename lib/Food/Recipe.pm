@@ -9,6 +9,7 @@ use List::Util qw( all );
 use Math::Fraction;
 use MealMaster;
 use Storable;
+use URI::Encode qw( uri_encode );
 
 our $VERSION = '0.05';
 
@@ -303,7 +304,7 @@ get '/list'  => sub {
     # Find the given recipe by title
     for my $i ( @$list ) {
         RECIPE: for my $recipe ( @recipes ) {
-            if ( $recipe->title eq $i ) {
+            if ( uri_encode( $recipe->title ) eq $i ) {
                 push @items, $recipe;
                 last RECIPE;
             }
