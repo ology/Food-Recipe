@@ -14,6 +14,7 @@ use URI::Encode qw( uri_encode );
 our $VERSION = '0.05';
 
 my $COOKIE_SEP = qr/\s*\|\s*/;
+my $APP_TITLE  = 'Recipe Search Tool';
 
 =head1 DESCRIPTION
 
@@ -98,7 +99,7 @@ any '/' => sub {
     my $list = _cookies_as_arrayref();
 
     template 'index' => {
-        page_title => 'Recipe Search Tool',
+        page_title => $APP_TITLE,
         title      => $title,
         category   => $category,
         ingredient => $ingredient,
@@ -129,7 +130,7 @@ get '/categories' => sub {
     }
 
     template 'categories' => {
-        page_title => 'Recipe Search Tool',
+        page_title => $APP_TITLE,
         categories => \%categories,
     };
 };
@@ -352,7 +353,7 @@ get '/list'  => sub {
     }
 
     template 'list' => {
-        page_title => 'Recipe Search Tool',
+        page_title => $APP_TITLE,
         list => \@items,
         shop => $shop,
     };
@@ -366,7 +367,7 @@ Display the help page.
 
 get '/help' => sub {
     template 'help' => {
-        page_title => 'Recipe Search Tool',
+        page_title => $APP_TITLE,
     };
 };
 
