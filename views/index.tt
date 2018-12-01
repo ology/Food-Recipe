@@ -34,6 +34,7 @@
   </div>
 
 <button name="submit" type="submit" class="button small">Search</button>
+<button name="reset" type="reset" class="button small">Reset</button>
 
 </form>
 
