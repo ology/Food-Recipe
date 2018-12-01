@@ -2,7 +2,7 @@
 
 <div>
     <div class="headerLeft">
-        <h3>Recipe Search Tool</h3>
+        <h3><% page_title %></h3>
     </div>
     <div class="headerRight">
         <a href="/list"><b>Shopping list</b></a><% IF list.size %> (<% list.size %>)<% END %>

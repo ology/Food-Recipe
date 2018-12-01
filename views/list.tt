@@ -1,7 +1,7 @@
 <div id="page">
 
     <div>
-        <a href="/"><h3 class="pageTitle">Recipe Search Tool</h3></a>
+        <a href="/"><h3 class="pageTitle"><% page_title %></h3></a>
     </div>
     <br />
 

@@ -1,7 +1,7 @@
 <div id="page">
 
 <h3 class="pageTitle">
-<a href="/">Recipe Search Tool</a>
+<a href="/"><% page_title %></a>
 <br />
 Categories:
 </h3>
