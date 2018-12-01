@@ -442,6 +442,8 @@ L<MealMaster>
 
 L<Storable>
 
+L<URI::Encode>
+
 L<http://www.ffts.com/recipes.htm>
 
 =cut
