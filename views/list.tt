@@ -11,7 +11,7 @@
         <li class="paddedItem">
             <a href="/recipe?title=<% i.title | uri %>&category=<% i.categories.join(' ').lower | uri %>"><% i.title.lower.ucfirst %></a>
             <form action='/remove' method="post">
-                <input type="hidden" name="title" value="<% i.title %>" />
+                <input type="hidden" name="title" value="<% i.title | uri %>" />
                 <button type="submit" name="submit" class="button tiny">Remove</button>
             </form>
             <ol>
