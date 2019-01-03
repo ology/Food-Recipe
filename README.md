@@ -3,7 +3,7 @@ Perl Dancer Recipe Search Tool App
 
 To use this, first uncompress the recipes file:
 
-  > tar -zxvf MMF-recipes-20171129.tgz  # On the unix commandline
+  > tar -zxvf MMF-recipes.tgz  # On the unix commandline
 
 Next, install the required perl modules:
 
