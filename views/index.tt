@@ -16,17 +16,17 @@
   <div class="grid-container">
     <div class="grid-x grid-padding-x">
       <div class="medium-6 cell">
-        <label>Title
+        <label>Title:
           <input name="title" type="text" placeholder="chicken marsala" value="<% title.join(' ') %>">
         </label>
       </div>
       <div class="medium-6 cell">
-        <label><a href="categories">Category</a>
+        <label><a href="categories">Category</a>:
           <input name="category" type="text" placeholder="holiday meat" value="<% category.join(' ') %>">
         </label>
       </div>
       <div class="medium-6 cell">
-        <label>Ingredients
+        <label>Ingredients:
           <input name="ingredient" type="text" placeholder="salt sugar" value="<% ingredient.join(' ') %>">
         </label>
       </div>
