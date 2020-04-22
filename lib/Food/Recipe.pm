@@ -6,7 +6,7 @@ use Dancer qw( :syntax );
 use Dancer::Cookies;
 use File::Find::Rule;
 use List::Util qw( all );
-use Math::Fraction;
+use Math::FractionManip;
 use MealMaster;
 use Storable;
 use URI::Encode qw( uri_encode );
@@ -184,8 +184,8 @@ any '/recipe' => sub {
 
                     # Handle the broken behavior of Math::Fraction
                     $decimal = sprintf '%.2f', $decimal if length($decimal) > 8;
-                    $decimal = eval { frac($decimal) };
-                    die "Can't frac($decimal): $@" if $@;
+                    $decimal = eval { Math::FractionManip->new($decimal) };
+                    die "Can't Math::FractionManip->new($decimal): $@" if $@;
 
                     $quantity = $quantity . " ($integer$decimal)";
                 }
@@ -441,7 +441,7 @@ L<File::Find::Rule>
 
 L<List::Util>
 
-L<Math::Fraction>
+L<Math::FractionManip>
 
 L<MealMaster>
 
