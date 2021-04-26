@@ -6,6 +6,7 @@ use Dancer qw( :syntax );
 use Dancer::Cookies;
 use File::Find::Rule;
 use List::Util qw( all );
+use lib map { "$ENV{HOME}/sandbox/$_/lib" } qw(Math-FractionManip);
 use Math::FractionManip;
 use MealMaster;
 use Storable;
